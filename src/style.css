@@ -1,0 +1,17 @@
+#container {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+canvas {
+  position: absolute;
+}
+
+#grid {
+  background: black;
+  z-index: 0;
+}
+
+#lead {
+  z-index: 1;
+}

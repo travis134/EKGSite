@@ -1,0 +1,59 @@
+{
+  "name": "ekg-site",
+  "version": "1.0.0",
+  "description": "Example usage of EKG monitor",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha --opts mocha.opts",
+    "test:watch": "mocha --opts mocha.opts --watch",
+    "lint": "tslint src/**/*.ts",
+    "prettier": "prettier --config .prettierrc --write {src,test}/**/*.ts",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
+    "prepublishOnly": "npm run prettier && npm run lint && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travis134/EKGSite.git"
+  },
+  "keywords": [
+    "ekg",
+    "heart",
+    "monitor"
+  ],
+  "author": {
+    "name": "Travis Sein",
+    "email": "travis134@gmail.com"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/travis134/EKGSite/issues"
+  },
+  "homepage": "https://github.com/travis134/EKGSite#readme",
+  "dependencies": {
+    "ekg-monitor": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "css-loader": "^2.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^5.3.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
